@@ -61,4 +61,4 @@ jobs:
           git add data/resources.json README.md
           git commit -m 'Propose newly discovered learning resources'
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "Review learning resources — $(date -u +%F)" --body-file work/proposal.md
+          gh pr create --base main --head "$branch" --title "Review learning resources — $(date -u +%F)" --body-file work/proposal.md --reviewer joseruiz1571

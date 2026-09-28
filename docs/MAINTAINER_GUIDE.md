@@ -50,6 +50,8 @@ A full run without the secret fails with a clear setup message. An explicitly se
 
 You can ask Codex: “Review PR #N, inspect its links, remove weak additions, and improve descriptions. Leave it open for me to merge.” This lets you delegate preparation while retaining the decision.
 
+The discovery workflow requests review from `joseruiz1571`. GitHub delivers notifications according to your account notification settings. If you transfer or fork the repository, update the reviewer and repository/site links.
+
 Do not merge generic summaries simply to clear the queue. A useful small library is better than a noisy large one.
 
 ## Schedule

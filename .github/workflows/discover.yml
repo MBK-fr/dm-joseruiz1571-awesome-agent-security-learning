@@ -5,6 +5,10 @@ on:
     - cron: '23 13 * * 1'
   workflow_dispatch:
     inputs:
+      preview_only:
+        description: 'Preview candidates in the run summary without creating a PR'
+        type: boolean
+        default: false
       without_web:
         description: 'Explicit partial test: skip Brave web search'
         type: boolean
@@ -46,7 +50,7 @@ jobs:
           python -m unittest discover -s tests -v
           python scripts/build.py
       - name: Open a review PR
-        if: steps.search.outputs.count != '' && steps.search.outputs.count != '0'
+        if: inputs.preview_only != true && steps.search.outputs.count != '' && steps.search.outputs.count != '0'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

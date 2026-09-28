@@ -32,6 +32,8 @@ The repository and website need no paid service. Broad discovery needs a Brave S
 
 Eight web queries return up to ten results each. Two or three scheduled runs per month use 16–24 requests. At Brave's advertised September 28, 2026 rate of $5 per 1,000 requests, that is approximately $0.08–$0.12 before credits, taxes, or additional manual runs. Pricing and credits can change; check the provider. No language-model API is used or billed. The website attributes Brave Search API.
 
+Select **preview_only** for a report in the workflow summary without creating a PR. Preview mode still searches and can incur API charges.
+
 A full run without the secret fails with a clear setup message. An explicitly selected partial test can exercise GitHub and feeds while setup is unfinished; it does not test broad web search.
 
 ## Review your first PR without a terminal

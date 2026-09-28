@@ -51,6 +51,26 @@ class CatalogTests(unittest.TestCase):
         row=candidate({'title':'Agent security course','url':'https://example.com/a','description':'Secret proprietary snippet'},'Brave Search','query',date(2026,9,28))
         self.assertNotIn('proprietary',row['description']); self.assertIsNone(row['checked_on'])
         self.assertEqual(row['type'],'Courses'); self.assertIn('candidate-id:',report([row],[],False))
+    def test_brave_success_and_private_snippet_not_published(self):
+        config={'web_queries':['agent safety course'],'github_queries':[],'feeds':[]}
+        payload={'web':{'results':[{'title':'Agent safety course','url':'https://example.org/course','description':'Learn agent oversight'}]}}
+        with patch.dict('os.environ',{'BRAVE_SEARCH_API_KEY':'test-only'}), patch('discover.fetch',return_value=json.dumps(payload).encode()), patch('discover.time.sleep'):
+            groups,failures=collect(config,date(2026,9,28))
+        self.assertFalse(failures); self.assertEqual(groups[0][0]['type'],'Courses')
+    def test_successful_empty_web_search_is_not_an_error(self):
+        config={'web_queries':['agent safety'],'github_queries':[],'feeds':[]}
+        with patch.dict('os.environ',{'BRAVE_SEARCH_API_KEY':'test-only'}), patch('discover.fetch',return_value=b'{}'), patch('discover.time.sleep'):
+            groups,failures=collect(config,date(2026,9,28))
+        self.assertEqual(groups,[[]]); self.assertFalse(failures)
+    def test_all_required_web_queries_fail_even_if_github_succeeds(self):
+        config={'web_queries':['agent safety'],'github_queries':['agent security'],'feeds':[]}
+        with patch.dict('os.environ',{'BRAVE_SEARCH_API_KEY':'test-only'}), patch('discover.fetch',side_effect=ValueError('failure')), patch('discover.gh',return_value='{"items": []}'), patch('discover.time.sleep'), self.assertRaisesRegex(RuntimeError,'All Brave'):
+            collect(config,date(2026,9,28))
+    def test_partial_feed_failure_preserves_success(self):
+        config={'web_queries':[],'github_queries':['agent security'],'feeds':[{'name':'broken','url':'https://example.org/feed'}]}
+        with patch.dict('os.environ',{},clear=True), patch('discover.fetch',side_effect=ValueError('failure')), patch('discover.gh',return_value='{"items": []}'), patch('discover.time.sleep'):
+            groups,failures=collect(config,date(2026,9,28),False)
+        self.assertEqual(len(failures),1); self.assertEqual(groups,[[]])
     def test_markdown_escaping(self):
         self.assertNotIn('<script>',markdown('<script>alert(1)</script>'))
         self.assertNotIn('[',markdown('[bad](javascript:alert(1))'))

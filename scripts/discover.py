@@ -163,6 +163,7 @@ def main():
         print('true' if due(today,date.fromisoformat(config['anchor_date'])) else 'false'); return
     resources=validate(load('resources.json'))
     excluded={resource_id(r['url']) for r in resources}
+    excluded.add(resource_id('https://github.com/'+args.repo))
     excluded|={resource_id(r['url']) for r in load('research-inbox.json')}
     excluded|={resource_id(r['url']) for r in load('ignored.json')}
     excluded|=historical_ids(args.repo)  # Fail closed if history cannot be read.

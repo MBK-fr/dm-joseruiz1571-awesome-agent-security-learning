@@ -122,3 +122,12 @@ footer a { display: inline-block; padding-block: .375rem; }
   .card, input, select, button { border-color: CanvasText; }
   :focus-visible { outline-color: Highlight; }
 }
+
+.threat-feature { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: var(--space-5); padding-block: var(--space-5); border-bottom: 1px solid var(--line); }
+.threat-copy h2 { font: 400 clamp(2rem, 3vw, 2.75rem)/1.15 Georgia, serif; color: var(--green); margin: 0 0 var(--space-3); text-wrap: balance; }
+.threat-copy p { color: var(--muted); max-width: 55ch; }
+.threat-links { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem 1.25rem; margin-block: var(--space-3); }
+.threat-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.threat-preview { display: block; border: 1px solid var(--control-line); background: var(--paper); }
+.threat-preview img { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) { .threat-feature { grid-template-columns: 1fr; gap: var(--space-3); padding-block: var(--space-4); } }

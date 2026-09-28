@@ -415,5 +415,23 @@
     "checked_on": "2026-09-28",
     "evidence": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
     "verification": "Page inspected"
+  },
+  {
+    "id": "coding-agent-threat-model",
+    "title": "Coding Agent Threat Model — Apollo Watcher Student Guide",
+    "url": "https://joseruiz1571.github.io/awesome-agent-security-learning/#threat-model",
+    "type": "Guides & standards",
+    "topics": [
+      "Security",
+      "Red teaming",
+      "Safety"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Original infographic and student worksheet tracing coding-agent threats, Watcher review coverage and independent execution controls. Includes primary sources and a harmless classroom exercise.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/joseruiz1571/awesome-agent-security-learning/blob/main/docs/CODING_AGENT_THREAT_MODEL.md",
+    "verification": "Page inspected"
   }
 ]

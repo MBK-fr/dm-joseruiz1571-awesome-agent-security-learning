@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1420" viewBox="0 0 1200 1420" role="img" aria-labelledby="title desc">
+<title id="title">Coding agents: follow the action, check the boundary</title>
+<desc id="desc">Untrusted inputs reach a coding agent. Only routed actions reach Watcher review; other actions bypass that gate. Permissions and sandbox controls independently constrain execution. Recorded evidence supports later analysis. Five threat chains and coverage caveats follow.</desc>
+<rect width="1200" height="1420" fill="#f6f7f2"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#235e4e" stroke-width="1.5"/></marker></defs>
+<text x="56" y="72" font-family="Georgia, serif" font-size="48" fill="#172e2b" font-weight="400">Coding agents</text>
+<text x="56" y="119" font-family="Georgia, serif" font-size="34" fill="#235e4e" font-weight="400">Follow the action. Check the boundary.</text>
+<text x="56" y="162" font-family="Arial, sans-serif" font-size="22" fill="#172e2b" font-weight="400">A threat model for students using Apollo Watcher</text>
+<text x="56" y="198" font-family="Arial, sans-serif" font-size="19" fill="#49615a" font-weight="400">Scope: a local coding agent with tools, files and possible network access.</text>
+<rect x="56" y="238" width="1088" height="58" rx="4" fill="#e8eedf" stroke="#82958b"/>
+<text x="78" y="274" font-family="Arial, sans-serif" font-size="24" fill="#172e2b" font-weight="700">A recorded action is not proof that it was checked before execution.</text>
+<rect x="56" y="336" width="295" height="132" rx="4" fill="#ffffff" stroke="#82958b"/>
+<text x="76" y="371" font-family="Arial, sans-serif" font-size="25" fill="#172e2b" font-weight="700">Untrusted inputs</text>
+<text x="76" y="407" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Repo files • web content</text>
+<text x="76" y="441" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Tool output • dependencies</text>
+<rect x="425" y="336" width="290" height="132" rx="4" fill="#ffffff" stroke="#82958b"/>
+<text x="447" y="371" font-family="Arial, sans-serif" font-size="25" fill="#172e2b" font-weight="700">Coding agent</text>
+<text x="447" y="407" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Interprets task + context</text>
+<text x="447" y="441" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Chooses a tool action</text>
+<path d="M351 400 H425" fill="none" stroke="#235e4e" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="355" y="327" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Read</text>
+<rect x="793" y="336" width="351" height="132" rx="4" fill="#e8eedf" stroke="#82958b"/>
+<text x="815" y="371" font-family="Arial, sans-serif" font-size="25" fill="#172e2b" font-weight="700">Watcher review gate</text>
+<text x="815" y="407" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Only calls routed for review</text>
+<text x="815" y="441" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Policy + configured grading</text>
+<path d="M715 400 H793" fill="none" stroke="#235e4e" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="728" y="327" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Route</text>
+<text x="58" y="508" font-family="Arial, sans-serif" font-size="20" fill="#235e4e" font-weight="400">Trust boundary: content is evidence,</text>
+<rect x="56" y="565" width="659" height="126" rx="4" fill="#ffffff" stroke="#82958b"/>
+<text x="78" y="601" font-family="Arial, sans-serif" font-size="25" fill="#172e2b" font-weight="700">Execution boundary</text>
+<text x="78" y="636" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Sandbox • permissions • credentials • network controls</text>
+<text x="78" y="668" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="400">Protect files, private data, shared repos and services.</text>
+<path d="M570 468 V565" fill="none" stroke="#235e4e" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+<text x="58" y="536" font-family="Arial, sans-serif" font-size="20" fill="#235e4e">not authority to change the task.</text>
+<text x="586" y="543" font-family="Arial, sans-serif" font-size="19" fill="#49615a" font-weight="400">Not routed</text>
+<path d="M793 429 H759 V611 H715" fill="none" stroke="#235e4e" stroke-width="2"  marker-end="url(#arrow)"/>
+<text x="780" y="493" font-family="Arial, sans-serif" font-size="18" fill="#235e4e">Proceed only if permitted</text>
+<text x="794" y="549" font-family="Arial, sans-serif" font-size="18" fill="#172e2b" font-weight="400">Enforce: allow / deny / human review</text>
+<text x="794" y="577" font-family="Arial, sans-serif" font-size="18" fill="#172e2b" font-weight="400">Observe: no Watcher blocking</text>
+<text x="794" y="624" font-family="Arial, sans-serif" font-size="19" fill="#49615a" font-weight="400">A review decision is not a guarantee.</text>
+<text x="794" y="654" font-family="Arial, sans-serif" font-size="19" fill="#49615a" font-weight="400">Native controls still apply.</text>
+<rect x="56" y="731" width="1088" height="78" rx="4" fill="#e8eedf" stroke="#82958b"/>
+<text x="78" y="763" font-family="Arial, sans-serif" font-size="23" fill="#172e2b" font-weight="700">Recorded session → Analyzer → inspect evidence and actual outcome</text>
+<text x="78" y="793" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">Later grading cannot undo an action. Missing scores do not mean low risk.</text>
+<text x="56" y="867" font-family="Georgia, serif" font-size="30" fill="#172e2b" font-weight="400">Five threat chains to investigate</text>
+<text x="56" y="906" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="700">Goal hijack</text>
+<text x="292" y="906" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">Malicious instructions in a file → unauthorized tool use</text>
+<text x="292" y="934" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Treat retrieved content as untrusted; check the authorized task.</text>
+<text x="56" y="984" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="700">Data exposure</text>
+<text x="292" y="984" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">A tool sends private data → an external destination</text>
+<text x="292" y="1012" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Limit credentials and egress; examine destination and payload.</text>
+<text x="56" y="1062" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="700">Untrusted execution</text>
+<text x="292" y="1062" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">A dependency or script runs → code executes with agent privileges</text>
+<text x="292" y="1090" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Inspect before running; isolate execution and use least privilege.</text>
+<text x="56" y="1140" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="700">Destructive change</text>
+<text x="292" y="1140" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">An overbroad command → lost work or disrupted shared services</text>
+<text x="292" y="1168" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Constrain write scope; require review for consequential changes.</text>
+<text x="56" y="1218" font-family="Arial, sans-serif" font-size="21" fill="#172e2b" font-weight="700">Oversight loss</text>
+<text x="292" y="1218" font-family="Arial, sans-serif" font-size="20" fill="#172e2b" font-weight="400">Monitoring changes or delegated work → gaps in visibility or gating</text>
+<text x="292" y="1246" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Verify hooks, mode and subagent coverage; inspect actual outcomes.</text>
+<text x="56" y="1321" font-family="Arial, sans-serif" font-size="18" fill="#172e2b" font-weight="700">Coverage matters: Claude Code uses tool hooks; Codex gating depends on approval routing.</text>
+<text x="56" y="1351" font-family="Arial, sans-serif" font-size="18" fill="#49615a" font-weight="400">Original synthesis • Awesome Agent Security Learning • 28 Sep 2026 • MIT</text>
+<text x="56" y="1379" font-family="Arial, sans-serif" font-size="17" fill="#49615a" font-weight="400">Sources, assumptions and student worksheet: repository docs/CODING_AGENT_THREAT_MODEL.md</text>
+</svg>

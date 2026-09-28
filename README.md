@@ -24,6 +24,7 @@ Agent-specific resources are separated from broader AI and foundational material
 
 ## Guides & standards
 
+- [Coding Agent Threat Model — Apollo Watcher Student Guide](<https://joseruiz1571.github.io/awesome-agent-security-learning/#threat-model>) — Original infographic and student worksheet tracing coding-agent threats, Watcher review coverage and independent execution controls. Includes primary sources and a harmless classroom exercise. **Free; Agent-specific.** Available.
 - [CSA Autonomous Action Runtime Management](<https://cloudsecurityalliance.org/research/working-groups/autonomous-action-runtime-management-aarm>) — Working group exploring runtime controls and governance for autonomous actions. **Free; Agent-specific.** Available.
 - [Linux Foundation: Agentic AI Foundation](<https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation>) — Background on the foundation and projects including MCP, goose, and AGENTS.md; an ecosystem orientation resource. **Free; Foundations.** Available.
 - [MCP Security Best Practices](<https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices>) — Official guidance on authorization, confused-deputy risks, token handling, and other MCP security concerns. **Free; Agent-specific.** Available.

@@ -18,4 +18,10 @@ function filter() {
   document.getElementById('empty').hidden = visible !== 0;
 }
 controls.forEach(el => el.addEventListener('input', filter));
-document.getElementById('reset').addEventListener('click', () => { controls.forEach(el => { el.value = ''; }); filter(); });
+function resetFilters() {
+  controls.forEach(el => { el.value = ''; });
+  filter();
+  controls[0].focus({ preventScroll: true });
+}
+document.getElementById('reset').addEventListener('click', resetFilters);
+document.getElementById('empty-reset').addEventListener('click', resetFilters);

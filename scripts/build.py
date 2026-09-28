@@ -38,11 +38,12 @@ def build():
         esc=html.escape
         search=esc(' '.join([r['title'],r['description'],r['type'],r['scope'],*r['topics']]).lower(),quote=True)
         tags=''.join(f'<span>{esc(t)}</span>' for t in r['topics'])
+        status_class=' availability-upcoming' if r['availability']=='Coming soon' else ''
         checked=f'Page inspected {r["checked_on"]}' if r['verification']=='Page inspected' else 'Metadata only · verify details'
         cards.append(f'''<article class="card" data-search="{search}" data-type="{esc(r['type'])}" data-topics="{esc('|'.join(r['topics']))}" data-scope="{esc(r['scope'])}" data-cost="{esc(r['cost'])}">
 <div class="card-top"><span class="kind">{esc(r['type'])}</span><span class="scope">{esc(r['scope'])}</span></div>
-<h3><a href="{esc(r['url'],quote=True)}" rel="noopener noreferrer">{esc(r['title'])} <span aria-hidden="true">↗</span></a></h3>
-<p>{esc(r['description'])}</p><div class="tags">{tags}</div><div class="card-bottom"><span>{esc(r['cost'])}</span><span>{esc(r['availability'])}</span></div><small>{esc(checked)}</small></article>''')
+<h3><a href="{esc(r['url'],quote=True)}" rel="noopener noreferrer">{esc(r['title'])}</a></h3>
+<p>{esc(r['description'])}</p><div class="tags">{tags}</div><div class="card-bottom"><span>{esc(r['cost'])}</span><span class="availability{status_class}">{esc(r['availability'])}</span></div><small>{esc(checked)}</small></article>''')
     template=(ROOT/'site/index.html').read_text()
     for token,value in {'CARDS':'\n'.join(cards),'COUNT':str(len(resources)), 'TYPES':''.join(f'<option>{html.escape(t)}</option>' for t in TYPES), 'TOPICS':''.join(f'<option>{html.escape(t)}</option>' for t in TOPICS), 'SCOPES':''.join(f'<option>{html.escape(t)}</option>' for t in SCOPES)}.items():
         template=template.replace('{{'+token+'}}',value)

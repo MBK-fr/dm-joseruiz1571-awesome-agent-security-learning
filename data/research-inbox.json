@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://hacktheagent.com/",
+    "title": "Hack the Agent",
+    "reason": "Automated access returned 403. Verify challenge content and access manually."
+  },
+  {
+    "url": "https://play.lakera.ai/agent-breaker",
+    "title": "Lakera Agent Breaker",
+    "reason": "JavaScript-only page; verify challenge availability and access terms in browser."
+  },
+  {
+    "url": "https://myllmbank.com/",
+    "title": "My LLM Bank",
+    "reason": "JavaScript-only Streamlit page; verify live challenge and learning objectives."
+  },
+  {
+    "url": "https://ctf.arkx.ninja/",
+    "title": "ARKX CTF",
+    "reason": "Entry page found; inspect challenge access and learning content before listing."
+  },
+  {
+    "url": "https://www.deeplearning.ai/courses/agentic-ai",
+    "title": "DeepLearning.AI Agentic AI",
+    "reason": "Fetch failed. Verify course page; likely foundations rather than a dedicated security course."
+  },
+  {
+    "url": "https://dreadnode.io/",
+    "title": "Dreadnode",
+    "reason": "Product homepage. Prefer a specific public research article, tutorial, or documented lab."
+  },
+  {
+    "url": "https://tinycode.io/",
+    "title": "Tinycode",
+    "reason": "Product homepage links a training range. Verify a specific learning experience and access terms."
+  },
+  {
+    "url": "https://noma.security/",
+    "title": "Noma Security",
+    "reason": "Product homepage. Identify specific learning resources or technical research."
+  },
+  {
+    "url": "https://www.linuxfoundation.org/projects",
+    "title": "Linux Foundation project directory",
+    "reason": "Broad directory. Evaluate individual agent security projects; foundation overview is included separately."
+  }
+]

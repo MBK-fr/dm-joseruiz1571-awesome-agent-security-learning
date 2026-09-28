@@ -1,0 +1,17 @@
+name: Suggest a learning resource
+description: Recommend a resource for the library
+title: 'Resource suggestion: '
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Resource URL
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: What can someone learn from it?
+      description: Include agent relevance, format, prerequisites, cost, and any affiliation.
+    validations:
+      required: true

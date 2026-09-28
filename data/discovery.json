@@ -1,0 +1,34 @@
+{
+  "anchor_date": "2026-09-28",
+  "max_candidates": 12,
+  "github_queries": [
+    "\"agent security\" in:name,description,topics archived:false fork:false",
+    "\"prompt injection\" agent in:description archived:false fork:false",
+    "\"agent governance\" in:name,description archived:false fork:false",
+    "\"agent safety\" in:name,description archived:false fork:false"
+  ],
+  "feeds": [
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/"
+    },
+    {
+      "name": "Embrace The Red",
+      "url": "https://embracethered.com/blog/index.xml"
+    },
+    {
+      "name": "OWASP GenAI",
+      "url": "https://genai.owasp.org/feed/"
+    }
+  ],
+  "web_queries": [
+    "AI agent security course certification training",
+    "AI agent red teaming CTF lab tutorial",
+    "AI agent safety evaluation oversight learning",
+    "AI agent governance framework guide",
+    "AI agent security book textbook",
+    "AI agent security podcast",
+    "AI agent security YouTube channel",
+    "MCP agent security research blog"
+  ]
+}

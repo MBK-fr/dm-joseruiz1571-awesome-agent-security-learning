@@ -1,0 +1,7 @@
+_site/
+work/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store

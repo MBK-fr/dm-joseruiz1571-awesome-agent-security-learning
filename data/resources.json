@@ -1,0 +1,419 @@
+[
+  {
+    "id": "owasp-asi",
+    "title": "OWASP Agentic Security Initiative",
+    "url": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+    "type": "Guides & standards",
+    "topics": [
+      "Security",
+      "Governance"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Threat models, community guidance, and security workstreams for autonomous agents.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "finbot",
+    "title": "OWASP FinBot CTF",
+    "url": "https://github.com/OWASP-ASI/finbot-ctf-demo",
+    "type": "CTFs & labs",
+    "topics": [
+      "Red teaming",
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free / infrastructure costs",
+    "description": "Practice goal manipulation and prompt injection against a deliberately vulnerable invoice-processing agent.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/OWASP-ASI/finbot-ctf-demo",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "pwngpt",
+    "title": "PwnGPT — Agentic LLM CTF",
+    "url": "https://github.com/c-goosen/ai-prompt-ctf",
+    "type": "CTFs & labs",
+    "topics": [
+      "Red teaming",
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free / infrastructure costs",
+    "description": "Self-hosted prompt-injection challenges with tool use and multiple agent levels.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/c-goosen/ai-prompt-ctf",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "secure-code",
+    "title": "GitHub Secure Code Game",
+    "url": "https://github.com/skills/secure-code-game",
+    "type": "CTFs & labs",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Foundations",
+    "cost": "Free",
+    "description": "Practice finding and fixing software vulnerabilities; useful groundwork for securing agent applications.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/skills/secure-code-game",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "agentdojo",
+    "title": "AgentDojo",
+    "url": "https://github.com/ethz-spylab/agentdojo",
+    "type": "Repositories & tools",
+    "topics": [
+      "Red teaming",
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free / infrastructure costs",
+    "description": "Research environment for evaluating prompt-injection attacks and defenses in tool-using agents.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/ethz-spylab/agentdojo",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "caase",
+    "title": "Certified Agentic AI Security Expert (CAASE)",
+    "url": "https://www.practical-devsecops.com/certified-agentic-ai-security-expert/",
+    "type": "Certifications",
+    "topics": [
+      "Security",
+      "Red teaming"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Paid",
+    "description": "Provider describes practical training in agent reasoning, memory, tool use, and multi-agent identity. Listed as coming soon when checked.",
+    "availability": "Coming soon",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.practical-devsecops.com/certified-agentic-ai-security-expert/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "sans546",
+    "title": "SANS SEC546: Securing Agentic AI",
+    "url": "https://www.sans.org/cyber-security-courses/securing-agentic-ai",
+    "type": "Courses",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Paid",
+    "description": "Instructor-led training focused on securing agentic AI systems. Check current dates and prerequisites with SANS.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.sans.org/cyber-security-courses/securing-agentic-ai",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "sans-webcast",
+    "title": "Securing Agentic AI: Where Do You Start?",
+    "url": "https://www.sans.org/webcasts/securing-agentic-ai-where-do-you-start",
+    "type": "Videos & webinars",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Check provider",
+    "description": "SANS introductory webcast on approaching agentic AI security. Registration or replay availability may vary.",
+    "availability": "Check provider",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.sans.org/webcasts/securing-agentic-ai-where-do-you-start",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "coursera",
+    "title": "Agentic AI Development & Security",
+    "url": "https://www.coursera.org/specializations/agentic-ai-development-security",
+    "type": "Courses",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Check provider",
+    "description": "Specialization combining agent development and security concepts. Verify enrollment and certificate terms.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.coursera.org/specializations/agentic-ai-development-security",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "ai-academy",
+    "title": "AI Security Academy",
+    "url": "https://www.aisecurityacademy.ai/",
+    "type": "Courses",
+    "topics": [
+      "Security",
+      "Red teaming"
+    ],
+    "scope": "Broader AI",
+    "cost": "Check provider",
+    "description": "AI security training catalog; select courses based on their syllabus and agent relevance.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.aisecurityacademy.ai/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "astrix",
+    "title": "Astrix AI Agent Training Program",
+    "url": "https://astrix.security/learn/ai-agent-training-program/",
+    "type": "Courses",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Check provider",
+    "description": "Vendor-produced training collection about AI agents and their security.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://astrix.security/learn/ai-agent-training-program/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "watcher",
+    "title": "Apollo Research Watcher",
+    "url": "https://watcher.apolloresearch.ai/",
+    "type": "Repositories & tools",
+    "topics": [
+      "Safety",
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Check provider",
+    "description": "Runtime monitoring and control project for studying and managing agent behavior.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://watcher.apolloresearch.ai/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "langchain-cert",
+    "title": "LangChain Certified Agent Engineer",
+    "url": "https://academy.langchain.com/pages/certifications-lcae",
+    "type": "Certifications",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Foundations",
+    "cost": "Check provider",
+    "description": "Agent engineering credential. Useful implementation background, not a dedicated agent-security certification.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://academy.langchain.com/pages/certifications-lcae",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "taise",
+    "title": "CSA Trusted AI Safety Expert (TAISE)",
+    "url": "https://cloudsecurityalliance.org/education/taise",
+    "type": "Certifications",
+    "topics": [
+      "Safety",
+      "Governance",
+      "Security"
+    ],
+    "scope": "Broader AI",
+    "cost": "Paid",
+    "description": "AI safety certificate program covering organizational practices and responsible adoption.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://cloudsecurityalliance.org/education/taise",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "aarm",
+    "title": "CSA Autonomous Action Runtime Management",
+    "url": "https://cloudsecurityalliance.org/research/working-groups/autonomous-action-runtime-management-aarm",
+    "type": "Guides & standards",
+    "topics": [
+      "Governance",
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Working group exploring runtime controls and governance for autonomous actions.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://cloudsecurityalliance.org/research/working-groups/autonomous-action-runtime-management-aarm",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "mcp-security",
+    "title": "MCP Security Best Practices",
+    "url": "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+    "type": "Guides & standards",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Official guidance on authorization, confused-deputy risks, token handling, and other MCP security concerns.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "nist-rmf",
+    "title": "NIST AI Risk Management Framework",
+    "url": "https://airc.nist.gov/airmf-resources/airmf/",
+    "type": "Guides & standards",
+    "topics": [
+      "Governance",
+      "Safety"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free",
+    "description": "Voluntary framework for governing, mapping, measuring, and managing AI risk. Foundation for agent governance; not a certification.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://airc.nist.gov/airmf-resources/airmf/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "safety-book",
+    "title": "Introduction to AI Safety, Ethics, and Society",
+    "url": "https://www.aisafetybook.com/",
+    "type": "Books",
+    "topics": [
+      "Safety",
+      "Governance"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free",
+    "description": "Online textbook introducing AI risks, safety, ethics, and societal governance.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.aisafetybook.com/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "simon",
+    "title": "Simon Willison: Prompt Injection",
+    "url": "https://simonwillison.net/tags/prompt-injection/",
+    "type": "Blogs & newsletters",
+    "topics": [
+      "Security"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Technical explanations and commentary on prompt injection and the risks of tool-using AI systems.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://simonwillison.net/tags/prompt-injection/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "embrace",
+    "title": "Embrace The Red",
+    "url": "https://embracethered.com/blog/",
+    "type": "Blogs & newsletters",
+    "topics": [
+      "Security",
+      "Red teaming"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free",
+    "description": "Security research blog with practical investigations of prompt injection, assistants, and agent attack surfaces.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://embracethered.com/blog/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "owasp-video",
+    "title": "OWASP Foundation YouTube",
+    "url": "https://www.youtube.com/channel/UCe8j61ABYDuPTdtjItD2veA",
+    "type": "YouTube channels",
+    "topics": [
+      "Security",
+      "Red teaming"
+    ],
+    "scope": "Foundations",
+    "cost": "Free",
+    "description": "Application-security conference recordings, including AI security content. Choose agent-specific talks within this broad channel.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.youtube.com/channel/UCe8j61ABYDuPTdtjItD2veA",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "80k",
+    "title": "80,000 Hours Podcast",
+    "url": "https://80000hours.org/podcast/",
+    "type": "Podcasts",
+    "topics": [
+      "Safety",
+      "Governance"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free",
+    "description": "Long-form interviews including AI risk, alignment, and governance; the feed also covers other topics.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://80000hours.org/podcast/",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "pyrit",
+    "title": "Microsoft PyRIT",
+    "url": "https://github.com/microsoft/PyRIT",
+    "type": "Repositories & tools",
+    "topics": [
+      "Red teaming",
+      "Safety"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free / infrastructure costs",
+    "description": "Open-source framework for identifying generative AI risks through adversarial testing.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/microsoft/PyRIT",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "garak",
+    "title": "NVIDIA garak",
+    "url": "https://github.com/NVIDIA/garak",
+    "type": "Repositories & tools",
+    "topics": [
+      "Red teaming",
+      "Security"
+    ],
+    "scope": "Broader AI",
+    "cost": "Free / infrastructure costs",
+    "description": "LLM vulnerability scanner useful for learning about model-level risks within agent systems.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://github.com/NVIDIA/garak",
+    "verification": "Page inspected"
+  },
+  {
+    "id": "aaif",
+    "title": "Linux Foundation: Agentic AI Foundation",
+    "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
+    "type": "Guides & standards",
+    "topics": [
+      "Governance"
+    ],
+    "scope": "Foundations",
+    "cost": "Free",
+    "description": "Background on the foundation and projects including MCP, goose, and AGENTS.md; an ecosystem orientation resource.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
+    "verification": "Page inspected"
+  }
+]

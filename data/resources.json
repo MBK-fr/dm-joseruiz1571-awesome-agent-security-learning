@@ -14,7 +14,10 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://genai.owasp.org/initiatives/agentic-security-initiative/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "governance"
+    ]
   },
   {
     "id": "finbot",
@@ -31,7 +34,11 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/OWASP-ASI/finbot-ctf-demo",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "injection",
+      "goal-hijack"
+    ]
   },
   {
     "id": "pwngpt",
@@ -48,7 +55,10 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/c-goosen/ai-prompt-ctf",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "injection"
+    ]
   },
   {
     "id": "secure-code",
@@ -64,7 +74,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/skills/secure-code-game",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "agentdojo",
@@ -81,7 +92,11 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/ethz-spylab/agentdojo",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "injection",
+      "tool-exfil"
+    ]
   },
   {
     "id": "caase",
@@ -98,7 +113,8 @@
     "availability": "Coming soon",
     "checked_on": "2026-09-28",
     "evidence": "https://www.practical-devsecops.com/certified-agentic-ai-security-expert/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "sans546",
@@ -114,7 +130,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.sans.org/cyber-security-courses/securing-agentic-ai",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "sans-webcast",
@@ -130,7 +147,8 @@
     "availability": "Check provider",
     "checked_on": "2026-09-28",
     "evidence": "https://www.sans.org/webcasts/securing-agentic-ai-where-do-you-start",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "coursera",
@@ -146,7 +164,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.coursera.org/specializations/agentic-ai-development-security",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "ai-academy",
@@ -163,7 +182,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.aisecurityacademy.ai/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "astrix",
@@ -179,7 +199,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://astrix.security/learn/ai-agent-training-program/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "watcher",
@@ -196,7 +217,11 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://watcher.apolloresearch.ai/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "traces/custody",
+      "scope/RoE"
+    ]
   },
   {
     "id": "langchain-cert",
@@ -212,7 +237,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://academy.langchain.com/pages/certifications-lcae",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "taise",
@@ -230,7 +256,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://cloudsecurityalliance.org/education/taise",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "aarm",
@@ -247,7 +274,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://cloudsecurityalliance.org/research/working-groups/autonomous-action-runtime-management-aarm",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "mcp-security",
@@ -263,7 +291,11 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "identity",
+      "tool-exfil"
+    ]
   },
   {
     "id": "nist-rmf",
@@ -280,7 +312,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://airc.nist.gov/airmf-resources/airmf/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "safety-book",
@@ -297,7 +330,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.aisafetybook.com/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "simon",
@@ -313,7 +347,10 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://simonwillison.net/tags/prompt-injection/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "injection"
+    ]
   },
   {
     "id": "embrace",
@@ -330,7 +367,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://embracethered.com/blog/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "owasp-video",
@@ -347,7 +385,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.youtube.com/channel/UCe8j61ABYDuPTdtjItD2veA",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "80k",
@@ -364,7 +403,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://80000hours.org/podcast/",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "pyrit",
@@ -381,7 +421,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/microsoft/PyRIT",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "garak",
@@ -398,7 +439,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/NVIDIA/garak",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "aaif",
@@ -414,7 +456,8 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": []
   },
   {
     "id": "coding-agent-threat-model",
@@ -432,6 +475,76 @@
     "availability": "Available",
     "checked_on": "2026-09-28",
     "evidence": "https://github.com/joseruiz1571/awesome-agent-security-learning/blob/main/docs/CODING_AGENT_THREAT_MODEL.md",
-    "verification": "Page inspected"
+    "verification": "Page inspected",
+    "failure_modes": [
+      "injection",
+      "tool-exfil",
+      "traces/custody",
+      "scope/RoE"
+    ]
+  },
+  {
+    "id": "trace-tampering",
+    "title": "LLM Agents Can Easily Tamper With Their Own Traces",
+    "url": "https://arxiv.org/abs/2609.30266",
+    "type": "Research",
+    "topics": [
+      "Security",
+      "Safety"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Research on agents altering local execution records. Examines trace custody and argues for independent interception outside the agent’s control; findings concern the tested configurations.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://arxiv.org/abs/2609.30266",
+    "verification": "Page inspected",
+    "failure_modes": [
+      "traces/custody",
+      "injection"
+    ]
+  },
+  {
+    "id": "scopebench",
+    "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+    "url": "https://arxiv.org/abs/2609.30325",
+    "type": "Research",
+    "topics": [
+      "Security",
+      "Safety"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Benchmark separating task capability from scope adherence under goal pressure. Study of 30 tasks and eight models in one harness; useful for reasoning about rules of engagement, not a universal safety score.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://arxiv.org/abs/2609.30325",
+    "verification": "Page inspected",
+    "failure_modes": [
+      "scope/RoE",
+      "goal-hijack"
+    ]
+  },
+  {
+    "id": "agate",
+    "title": "AGATE: Provenance-Based Runtime Defense",
+    "url": "https://arxiv.org/abs/2609.30830",
+    "type": "Research",
+    "topics": [
+      "Security",
+      "Safety"
+    ],
+    "scope": "Agent-specific",
+    "cost": "Free",
+    "description": "Research on a harness-level authorization and data-provenance gate with deterministic decisions, without an LLM in the decision path. Reports limits involving transformations, legitimate reuse and observation coverage.",
+    "availability": "Available",
+    "checked_on": "2026-09-28",
+    "evidence": "https://arxiv.org/abs/2609.30830",
+    "verification": "Page inspected",
+    "failure_modes": [
+      "identity",
+      "tool-exfil",
+      "traces/custody"
+    ]
   }
 ]

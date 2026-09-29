@@ -13,6 +13,14 @@ from build import markdown
 class CatalogTests(unittest.TestCase):
     def test_real_catalog(self):
         self.assertGreater(len(validate(load('resources.json'))),20)
+    def test_failure_mode_validation_and_legacy_rows(self):
+        row=copy.deepcopy(load('resources.json')[0])
+        row.pop('failure_modes', None)
+        validate([row])
+        for value in ['injection', ['unknown'], ['identity', 'identity'], [{}]]:
+            row['failure_modes']=value
+            with self.subTest(value=value), self.assertRaises(ValueError): validate([row])
+
     def test_duplicates_ignore_tracking_and_fragment(self):
         a=load('resources.json')[0]; b=copy.deepcopy(a); b['id']='other'; b['url']=a['url']+'?utm_source=mail#section'
         with self.assertRaises(ValueError): validate([a,b])

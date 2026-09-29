@@ -131,3 +131,6 @@ footer a { display: inline-block; padding-block: .375rem; }
 .threat-preview { display: block; border: 1px solid var(--control-line); background: var(--paper); }
 .threat-preview img { display: block; width: 100%; height: auto; }
 @media (max-width: 700px) { .threat-feature { grid-template-columns: 1fr; gap: var(--space-3); padding-block: var(--space-4); } }
+
+.collection-label { grid-column: 1 / -1; max-width: 34rem; }
+#collection-note { color: var(--muted); max-width: 72ch; }

@@ -2,7 +2,7 @@
 import html
 import json
 import shutil
-from catalog import ROOT, TYPES, TOPICS, SCOPES, load, validate
+from catalog import ROOT, TYPES, TOPICS, SCOPES, FAILURE_MODES, load, validate
 
 def markdown(text):
     return html.escape(text).replace('[','&#91;').replace(']','&#93;').replace('*','&#42;').replace('_','&#95;').replace('`','&#96;').replace('\n',' ')
@@ -22,10 +22,10 @@ def build():
            'Agent-specific resources are separated from broader AI and foundational material. API, hosting, and model costs may apply to open-source labs.','',
            '## Contents','']
     for kind in TYPES:
-        slug=kind.lower().replace(' & ','--').replace(' ','-')
-        lines.append(f'- [{kind}](#{slug})')
+        slug=('Credentials (verify claims)' if kind == 'Certifications' else kind).replace('(', '').replace(')', '').lower().replace(' & ','--').replace(' ','-')
+        lines.append(f'- [{"Credentials (verify claims)" if kind == "Certifications" else kind}](#{slug})')
     for kind in TYPES:
-        lines += ['',f'## {kind}','']
+        lines += ['',f'## {"Credentials (verify claims)" if kind == "Certifications" else kind}','']
         for r in sorted((r for r in resources if r['type']==kind),key=lambda r:r['title'].lower()):
             lines.append(f'- [{markdown(r["title"])}](<{r["url"]}>) — {markdown(r["description"])} **{r["cost"]}; {r["scope"]}.** {r["availability"]}.')
     lines += ['', '## Curation and discovery','',
@@ -34,18 +34,23 @@ def build():
         'Inspired by [Arcanum’s AI Security Resource Hub](https://github.com/Arcanum-Sec/ai-sec-resources). Original descriptions and implementation; no copied catalog or branding. Web discovery powered by [Brave Search API](https://brave.com/search/api/).', '',
         'Use labs and testing tools only in environments where you have authorization. Content and code in this repository are available under the MIT license; linked works retain their own licenses.','']
     (ROOT/'README.md').write_text('\n'.join(lines))
-    for r in resources:
+    priority = {'CTFs & labs': 0, 'Repositories & tools': 1, 'Guides & standards': 2, 'Research': 3}
+    for r in sorted(resources, key=lambda r: (priority.get(r['type'], 4), r['title'].lower())):
         esc=html.escape
-        search=esc(' '.join([r['title'],r['description'],r['type'],r['scope'],*r['topics']]).lower(),quote=True)
+        collection = 'credentials' if r['type'] == 'Certifications' else ('agents' if r['scope'] == 'Agent-specific' else 'foundations')
+        initial_hidden = '' if collection == 'agents' else ' hidden'
+        modes = r.get('failure_modes', [])
+        search=esc(' '.join([r['title'],r['description'],r['type'],r['scope'],*r['topics'],*modes]).lower(),quote=True)
         tags=''.join(f'<span>{esc(t)}</span>' for t in r['topics'])
+        tags += ''.join(f'<span>{esc(m)}</span>' for m in modes)
         status_class=' availability-upcoming' if r['availability']=='Coming soon' else ''
         checked=f'Page inspected {r["checked_on"]}' if r['verification']=='Page inspected' else 'Metadata only · verify details'
-        cards.append(f'''<article class="card" data-search="{search}" data-type="{esc(r['type'])}" data-topics="{esc('|'.join(r['topics']))}" data-scope="{esc(r['scope'])}" data-cost="{esc(r['cost'])}">
+        cards.append(f'''<article class="card"{initial_hidden} data-collection="{collection}" data-modes="{esc("|".join(modes))}" data-search="{search}" data-type="{esc(r['type'])}" data-topics="{esc('|'.join(r['topics']))}" data-scope="{esc(r['scope'])}" data-cost="{esc(r['cost'])}">
 <div class="card-top"><span class="kind">{esc(r['type'])}</span><span class="scope">{esc(r['scope'])}</span></div>
 <h3><a href="{esc(r['url'],quote=True)}" rel="noopener noreferrer">{esc(r['title'])}</a></h3>
 <p>{esc(r['description'])}</p><div class="tags">{tags}</div><div class="card-bottom"><span>{esc(r['cost'])}</span><span class="availability{status_class}">{esc(r['availability'])}</span></div><small>{esc(checked)}</small></article>''')
     template=(ROOT/'site/index.html').read_text()
-    for token,value in {'CARDS':'\n'.join(cards),'COUNT':str(len(resources)), 'TYPES':''.join(f'<option>{html.escape(t)}</option>' for t in TYPES), 'TOPICS':''.join(f'<option>{html.escape(t)}</option>' for t in TOPICS), 'SCOPES':''.join(f'<option>{html.escape(t)}</option>' for t in SCOPES)}.items():
+    for token,value in {'CARDS':'\n'.join(cards),'COUNT':str(len(resources)), 'TYPES':''.join(f'<option>{html.escape(t)}</option>' for t in TYPES), 'TOPICS':''.join(f'<option>{html.escape(t)}</option>' for t in TOPICS), 'FAILURE_MODES':''.join(f'<option>{html.escape(m)}</option>' for m in FAILURE_MODES), 'DEFAULT_COUNT':str(sum(r['scope']=='Agent-specific' and r['type']!='Certifications' for r in resources)), 'SCOPES':''.join(f'<option>{html.escape(t)}</option>' for t in SCOPES)}.items():
         template=template.replace('{{'+token+'}}',value)
     (out/'index.html').write_text(template)
     (out/'resources.json').write_text(json.dumps(resources,ensure_ascii=False,indent=2)+'\n')

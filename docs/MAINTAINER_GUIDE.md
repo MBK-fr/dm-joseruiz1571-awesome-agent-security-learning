@@ -169,3 +169,11 @@ Useful next requests:
 - “Explain the discovery workflow line by line.”
 
 For future changes, ask for a PR so you can review exactly what changed.
+
+## Browse views and failure modes
+
+The default website view includes agent-specific resources except certifications, with labs and tools first. “Foundations & broader AI” contains the other relevance scopes. “Credentials (verify claims)” contains all certifications regardless of scope. “All resources” exposes the complete catalog. Switching views clears the other filters; Reset filters clears filters within the selected view. Without JavaScript, the agent-specific view is shown with a link to the complete README.
+
+`failure_modes` is an optional list drawn from `injection`, `goal-hijack`, `tool-exfil`, `identity`, `memory`, `traces/custody`, `scope/RoE`, and `governance`. Tag only supported learning content; an empty list means not tagged, not safe or irrelevant. Discovery proposals can omit it until human review. `Research` is a format for papers; page inspection is not replication or peer-review verification.
+
+No broader resource was deleted: Secure Code Game, AI Security Academy, 80,000 Hours and Linux Foundation ecosystem orientation are secondary; LangChain joins CAASE and TAISE on the credentials shelf. Existing scope, price, availability and inspection labels are preserved.

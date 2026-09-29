@@ -7,8 +7,9 @@ from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 ROOT = Path(__file__).resolve().parents[1]
-TYPES = ['Guides & standards','CTFs & labs','Courses','Certifications','Repositories & tools','Books','Blogs & newsletters','YouTube channels','Videos & webinars','Podcasts']
+TYPES = ['Research','Guides & standards','CTFs & labs','Courses','Certifications','Repositories & tools','Books','Blogs & newsletters','YouTube channels','Videos & webinars','Podcasts']
 TOPICS = ['Security','Red teaming','Safety','Governance']
+FAILURE_MODES = ['injection', 'goal-hijack', 'tool-exfil', 'identity', 'memory', 'traces/custody', 'scope/RoE', 'governance']
 SCOPES = ['Agent-specific','Broader AI','Foundations']
 
 def load(name):
@@ -55,6 +56,9 @@ def validate(resources):
             raise ValueError(f'Invalid classification: {r["id"]}')
         if not isinstance(r.get('topics'),list) or not r['topics'] or not set(r['topics']) <= set(TOPICS):
             raise ValueError('Invalid topics')
+        modes = r.get('failure_modes', [])
+        if not isinstance(modes, list) or any(not isinstance(m, str) or m not in FAILURE_MODES for m in modes) or len(modes) != len(set(modes)):
+            raise ValueError('Invalid failure modes')
         if r.get('checked_on') is not None:
             date.fromisoformat(r['checked_on'])
         if r['verification'] not in ['Page inspected','Metadata only']:

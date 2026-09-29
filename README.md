@@ -11,16 +11,23 @@ Agent-specific resources are separated from broader AI and foundational material
 
 ## Contents
 
+- [Research](#research)
 - [Guides & standards](#guides--standards)
 - [CTFs & labs](#ctfs--labs)
 - [Courses](#courses)
-- [Certifications](#certifications)
+- [Credentials (verify claims)](#credentials-verify-claims)
 - [Repositories & tools](#repositories--tools)
 - [Books](#books)
 - [Blogs & newsletters](#blogs--newsletters)
 - [YouTube channels](#youtube-channels)
 - [Videos & webinars](#videos--webinars)
 - [Podcasts](#podcasts)
+
+## Research
+
+- [AGATE: Provenance-Based Runtime Defense](<https://arxiv.org/abs/2609.30830>) — Research on a harness-level authorization and data-provenance gate with deterministic decisions, without an LLM in the decision path. Reports limits involving transformations, legitimate reuse and observation coverage. **Free; Agent-specific.** Available.
+- [LLM Agents Can Easily Tamper With Their Own Traces](<https://arxiv.org/abs/2609.30266>) — Research on agents altering local execution records. Examines trace custody and argues for independent interception outside the agent’s control; findings concern the tested configurations. **Free; Agent-specific.** Available.
+- [ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?](<https://arxiv.org/abs/2609.30325>) — Benchmark separating task capability from scope adherence under goal pressure. Study of 30 tasks and eight models in one harness; useful for reasoning about rules of engagement, not a universal safety score. **Free; Agent-specific.** Available.
 
 ## Guides & standards
 
@@ -44,7 +51,7 @@ Agent-specific resources are separated from broader AI and foundational material
 - [Astrix AI Agent Training Program](<https://astrix.security/learn/ai-agent-training-program/>) — Vendor-produced training collection about AI agents and their security. **Check provider; Agent-specific.** Available.
 - [SANS SEC546: Securing Agentic AI](<https://www.sans.org/cyber-security-courses/securing-agentic-ai>) — Instructor-led training focused on securing agentic AI systems. Check current dates and prerequisites with SANS. **Paid; Agent-specific.** Available.
 
-## Certifications
+## Credentials (verify claims)
 
 - [Certified Agentic AI Security Expert (CAASE)](<https://www.practical-devsecops.com/certified-agentic-ai-security-expert/>) — Provider describes practical training in agent reasoning, memory, tool use, and multi-agent identity. Listed as coming soon when checked. **Paid; Agent-specific.** Coming soon.
 - [CSA Trusted AI Safety Expert (TAISE)](<https://cloudsecurityalliance.org/education/taise>) — AI safety certificate program covering organizational practices and responsible adoption. **Paid; Broader AI.** Available.

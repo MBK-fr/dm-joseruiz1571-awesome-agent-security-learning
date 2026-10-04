@@ -133,7 +133,7 @@ With your key already in the environment, `python3 scripts/discover.py` performs
 
 Discovery can write proposal branches and create PRs. Publishing reads the repository and deploys Pages; it cannot push to main. Contributor PR checks are read-only and receive no Brave key. Actions are pinned to revisions; Dependabot proposes monthly updates. The bot never merges or approves proposals.
 
-GitHub's setting to allow Actions to create PRs is required. GitHub groups creation and approval capability into one setting; the workflow never uses approval. GitHub may restrict or require approval for checks on token-created PRs, so discovery validates the actual proposed catalog before creating the PR. If checks are absent after human edits, close and reopen the PR yourself, or manually run validation on its branch. [GitHub token behavior](https://docs.github.com/en/actions/concepts/security/github_token).
+GitHub's setting to allow Actions to create PRs is required. GitHub groups creation and approval capability into one setting; the workflow never uses approval. GitHub may restrict or require approval for checks on token-created PRs, so discovery validates the actual proposed catalog before creating the PR. If checks are absent, close and reopen the PR yourself to trigger PR validation and CodeQL. Wait for both and the code-scanning review before merging. [GitHub token behavior](https://docs.github.com/en/actions/concepts/security/github_token).
 
 Main requires a pull request, current passing validation and CodeQL checks, and resolved review conversations. Force pushes and deletion are blocked, with no bot bypass. There is no required second-person approval because this repository has one maintainer. Regenerate README before merging: a stale generated file fails validation. After merging another PR, update any remaining PR with main and rerun the build and checks.
 
@@ -184,6 +184,8 @@ No broader resource was deleted: Secure Code Game, AI Security Academy, 80,000 H
 The publisher has no repository write permission. Discovery and publishing run only on main; PR validation uses read-only access. All checkouts disable persisted credentials. Discovery configures temporary runner authentication only when pushing a proposal branch.
 
 CodeQL scans Python, JavaScript and GitHub Actions on PRs, main updates and weekly. Actions must use full commit pins and are restricted to GitHub-owned Actions. Dependabot checks Action versions monthly, with vulnerability alerts and security fixes enabled. `SECURITY.md` directs sensitive reports to GitHub private vulnerability reporting. `CODEOWNERS` requests maintainer attention.
+
+The main ruleset also requires CodeQL analysis results and blocks new high or critical security alerts and error-level alerts. A completed scan is not the same as a clean scan; inspect the findings. Automated checks cannot establish that a linked project is safe or that all vulnerabilities have been found.
 
 Branch protections do not decide whether a learning resource is good: still inspect the original source, affiliation, claims, costs, and fit. Approve first-time contributor workflow runs only after checking their full diff. Approval to run checks is distinct from approval to merge.
 
